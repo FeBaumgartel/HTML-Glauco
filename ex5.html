@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>ex5</title>
+        <meta charset="UTF-8";>
+        <link rel="stylesheet" type="text/css" href="base.css">
+        <!--5. Construa um algoritmo que leia um vetor de 15 palavras e mostre-os na ordem inversa.-->
+    </head>
+    <body>
+
+        <p>Digite a palavra 1: <input type="text" id="pal0">
+        <br>
+        Digite a palavra 2: <input type="text" id="pal1">
+        <br>
+        Digite a palavra 3: <input type="text" id="pal2">
+        <br>
+        Digite a palavra 4: <input type="text" id="pal3">
+        <br>
+        Digite a palavra 5: <input type="text" id="pal4">
+        <br>
+        Digite a palavra 6: <input type="text" id="pal5">
+        <br>
+        Digite a palavra 7: <input type="text" id="pal6">
+        <br>
+        Digite a palavra 8: <input type="text" id="pal7">
+        <br>
+        Digite a palavra 9: <input type="text" id="pal8">
+        <br>
+        Digite a palavra 10: <input type="text" id="pal9">
+        <br>
+        Digite a palavra 11: <input type="text" id="pal10">
+        <br>
+        Digite a palavra 12: <input type="text" id="pal11">
+        <br>
+        Digite a palavra 13: <input type="text" id="pal12">
+        <br>
+        Digite a palavra 14: <input type="text" id="pal13">
+        <br>
+        Digite a palavra 15: <input type="text" id="pal14">
+        <br></p>        
+        <input type="submit" id="botao" value="Enviar">
+        <script>
+            var pal = [];
+            var text="";
+            function mostraMensagem(){
+                for(var i=0;i<15;i++){
+                    pal.push(document.getElementById('pal'+i).value);
+                }
+                for(var i=14;i>=0;i--){
+                    text+=pal[i]+", ";
+                }
+                alert(text);
+            }
+            document.getElementById("botao").onclick = function(e) {
+                mostraMensagem();
+                e.preventDefault();
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <title>ex6</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="base.css">
+        <!--10. Construa um algoritmo que leia um vetor de 20 elementos e coloque-os em ordem crescente.-->
+    </head>
+    <body>
+        <p>Digite o número 1: <input type="text" id="num0">
+            <br>
+            Digite o número 2: <input type="text" id="num1">
+            <br>
+            Digite o número 3: <input type="text" id="num2">
+            <br>
+            Digite o número 4: <input type="text" id="num3">
+            <br>
+            Digite o número 5: <input type="text" id="num4">
+            <br>
+            Digite o número 6: <input type="text" id="num5">
+            <br>
+            Digite o número 7: <input type="text" id="num6">
+            <br>
+            Digite o número 8: <input type="text" id="num7">
+            <br>
+            Digite o número 9: <input type="text" id="num8">
+            <br>
+            Digite o número 10: <input type="text" id="num9">
+            <br>
+            Digite o número 11: <input type="text" id="num10">
+            <br>
+            Digite o número 12: <input type="text" id="num11">
+            <br>
+            Digite o número 13: <input type="text" id="num12">
+            <br>
+            Digite o número 14: <input type="text" id="num13">
+            <br>
+            Digite o número 15: <input type="text" id="num14">
+            <br>
+            Digite o número 16: <input type="text" id="num15">
+            <br>
+            Digite o número 17: <input type="text" id="num16">
+            <br>
+            Digite o número 18: <input type="text" id="num17">
+            <br>
+            Digite o número 19: <input type="text" id="num18">
+            <br>
+            Digite o número 20: <input type="text" id="num19">   
+            <br> </p>    
+            <input type="submit" id="botao" value="Enviar">
+            <script>
+                    var num = [];
+                    var text="";
+                    var aux=0;
+                    var i, j, k;
+                    function mostraMensagem(){
+                        for(i=0;i<20;i++){
+                            num.push(parseFloat(document.getElementById('num'+i).value));
+                        }
+
+                        for (i = 1; i < 20; i++) {
+                            for (j = 0; j < 20 - i; j++) {
+                                if (num[j] > num[j + 1]) {
+                                    aux = num[j];
+                                    num[j] = num[j + 1];
+                                    num[j + 1] = aux;
+                                }
+                            }
+                        }
+                        for(k=0; k < 20; k++){
+                            text+=num[k]+","
+                        }
+                        alert(text);
+                    }
+                    document.getElementById("botao").onclick = function(e) {
+                        mostraMensagem();
+                        e.preventDefault();
+                    }
+                </script>
+    </body>
+</html>

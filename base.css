@@ -1,0 +1,13 @@
+#botao{
+    position: relative;
+    top: 10px;
+}
+input[type=text]{
+    margin-bottom: 5px;
+}
+body{
+    background-color: #0abab5;
+}
+p{
+    color: black;
+}

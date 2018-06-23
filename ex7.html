@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>ex7</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="base.css">
+        <!--1. Faça um programa que leia um número, passe este número como parâmetro para uma função que retorne 0 
+        se o número for par ou 1 se o número for ímpar. -->
+    </head>
+    <body>
+        <p>Digite o número 1: <input type="text" id="num">
+            <br></p>
+            <input type="submit" id="botao" value="Enviar">
+            <script>
+                    function mostraMensagem(){
+                        var num = parseFloat(document.getElementById('num').value);
+                        if(num%2==0){
+                            alert("0");
+                        }else  
+                            alert("1");
+                    }
+                    document.getElementById("botao").onclick = function(e) {
+                        mostraMensagem();
+                        e.preventDefault();
+                    }
+                </script>
+    </body>
+</html>

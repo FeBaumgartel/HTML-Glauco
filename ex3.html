@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title>ex3</title>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" type="text/css" href="base.css">
+        <!--10) Faça um programa que implemente uma calculadora simples. 
+        O programa deve solicitar os operandos e o operador e mostrar a entrada e o resultado. 
+
+        O menu será como segue:            
+        [ 1 ] – Adição            
+        [ 2 ] – Subtração            
+        [ 3 ] – Multiplicação            
+        [ 4 ] – Divisão
+        [ 5 ] – Fim-->
+    </head>
+    <body><p>
+        Digite o valor do operando 1: <input type="text" id="num1" >
+        <br>
+        Digeite o valor do operador:  <br>    
+        [ 1 ] – Adição<br>            
+        [ 2 ] – Subtração<br>            
+        [ 3 ] – Multiplicação<br>            
+        [ 4 ] – Divisão<br>
+        [ 5 ] – Fim<br><input type="text" id="operador" >
+        <br>
+        Digite a terceira nota: <input type="text" id="num2" >
+        <br></p>
+        <input type="submit" id="botao" value="Enviar">
+        <script>
+            function mostraMensagem(){
+                var num1 = parseFloat(document.getElementById('num1').value);
+                var num2 = parseFloat(document.getElementById('num2').value);
+                var op = parseFloat(document.getElementById('operador').value);
+                var res;
+                switch (op){
+                case 1:
+                    res=num1+num2;
+                    alert(num1+"+"+num2+"="+res);
+                    break;
+                case 2:
+                    res=num1-num2;
+                    alert(num1+"-"+num2+"="+res);
+                    break;
+                case 3:
+                    res=num1*num2;
+                    alert(num1+"*"+num2+"="+res);
+                    break;
+                case 4:
+                    res=num1/num2;
+                    alert(num1+"/"+num2+"="+res);
+                    break;
+                default:
+                    printf("Operador não encontrado");
+                    break;
+                }
+            }
+            document.getElementById("botao").onclick = function(e) {
+                mostraMensagem();
+                e.preventDefault();
+            }
+        </script>
+    </body>
+</html>

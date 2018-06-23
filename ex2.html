@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>ex2</title>
+        <link rel="stylesheet" type="text/css" href="base.css">
+        <meta charset="utf-8"/>
+        <!--9) Faça um programa que peça três notas de um aluno e calcule a média.
+        Analisar a média e imprimir uma das mensagens a seguir:
+            a) A mensagem "Aprovado", se a média for maior ou igual a 7, com a respectiva média alcançada;
+            b) A mensagem "Reprovado", se a média for menor do que 7, com a respectiva média alcançada;
+            c) A mensagem "Aprovado com Distinção", se a média for igual a 10.-->
+    </head>
+    <body>
+        <p>
+        Digite a primeira nota: <input type="text" id="num1" >
+        <br>
+        Digite a segunda nota: <input type="text" id="num2" >
+        <br>
+        Digite a terceira nota: <input type="text" id="num3" >
+        <br></p>
+        <input type="submit" id="botao" value="Enviar">
+        <script>
+            function mostraMensagem(){
+                var num1 = parseFloat(document.getElementById('num1').value);
+                var num2 = parseFloat(document.getElementById('num2').value);
+                var num3 = parseFloat(document.getElementById('num3').value);
+
+                var mf=(num1+num2+num3)/3;
+            
+                if(mf==10){
+                    alert("Aprovado com Distincao");
+                }else
+                if(mf>=7){
+                    alert("Aprovado");
+                }else
+                    alert("Reprovado");
+            }
+            document.getElementById("botao").onclick = function(e) {
+                mostraMensagem();
+                e.preventDefault();
+            }
+        </script>
+    </body>
+</html>
